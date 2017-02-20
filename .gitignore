@@ -48,3 +48,5 @@ ehthumbs.db
 #####################
 *.txt
 *.sh
+run_calcAdirSlope.m
+runfun_calcAdirSlope.m
