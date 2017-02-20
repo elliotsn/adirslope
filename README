@@ -1,0 +1,46 @@
+% ---------
+% adirslope
+% ---------
+%
+% Matlab/GNU Octave functions to calculate the maximum adirectional slope 
+% as a function of baseline in a digital elevation model. This software is not official 
+% and is provided 'as is'. Supported elevation models are HiRISE *.cub files, which are
+% USGS ISIS3 cubes output from SOCET SET.
+% 
+% -----
+% USAGE
+% -----
+%   
+% Example: Calculate adirectional slope maps at 10, 50 and 200 m baselines, at an 
+% angular spacing of 10 degrees, for the DEM 'thisDEM.cub', which has spatial resolution 
+% of 1.05 m. Save the results to 'thisDEM.mat'.
+%
+%     % Note that if res is passed as empty or zero then res is set to the 'pixres' value 
+%     % in the header.
+%     fpath = 'thisDEM.cub';
+%     outfpath = 'thisDEM.mat';
+%     L = [10 50 200];
+%     res = 1.05;
+%	  alpha = 10;
+%     success = calcAdirSlope(fpath, outfpath, L, res, alpha);
+%
+% The amount of memory depends heavily on the size of the DEM. Observed memory 
+% consumption for typical HiRISE DEMs ranges between ~15 - 40 GB. It is recommended to 
+% run this code on a sufficiently capable system.
+%
+% --------------
+% FILE INVENTORY
+% --------------
+% 
+% adirSlope.m
+% calcAdirSlope.m
+% crop_img.m
+% equirec2latlon.m
+% ocentric2ographicLat.m
+% strRemoveQuotes.m
+% getPrecision.m
+% getEndian.m
+% readPdsLbl.m
+% readIsisCub.m
+% readHiriseDem.m
+% reverse.m
